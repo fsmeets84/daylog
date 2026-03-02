@@ -9,7 +9,7 @@ vi.mock('@/utils/image', () => ({
 }));
 
 // Mock URL.createObjectURL
-global.URL.createObjectURL = vi.fn(() => 'http://mock-local-url');
+global.URL.createObjectURL = vi.fn(() => 'https://mock-local-url');
 
 describe('ImageSection', () => {
   const mockOnImageFileChange = vi.fn();
@@ -53,7 +53,7 @@ describe('ImageSection', () => {
     render(
       <ImageSection
         altText="Test Image"
-        currentImageUrl="http://test-image.jpg"
+        currentImageUrl="https://test-image.jpg"
         onImageFileChange={mockOnImageFileChange}
         onImageUrlChange={mockOnImageUrlChange}
         onDeleteImage={mockOnDeleteImage}
@@ -127,7 +127,7 @@ describe('ImageSection', () => {
     render(
       <ImageSection
         altText="Test Image"
-        currentImageUrl="http://test-image.jpg"
+        currentImageUrl="https://test-image.jpg"
         onImageFileChange={mockOnImageFileChange}
         onImageUrlChange={mockOnImageUrlChange}
         onDeleteImage={mockOnDeleteImage}
@@ -177,7 +177,7 @@ describe('ImageSection', () => {
         {
           id: '1',
           description: 'A beautiful sunset',
-          urls: { thumb: 'http://thumb-url', regular: 'http://regular-url' },
+          urls: { thumb: 'https://thumb-url', regular: 'https://regular-url' },
         },
       ],
     };
@@ -219,7 +219,7 @@ describe('ImageSection', () => {
         {
           id: '1',
           description: 'A beautiful sunset',
-          urls: { thumb: 'http://thumb-url', regular: 'http://regular-url' },
+          urls: { thumb: 'https://thumb-url', regular: 'https://regular-url' },
         },
       ],
     };
@@ -256,7 +256,7 @@ describe('ImageSection', () => {
       await user.click(imageBtn);
     }
 
-    expect(mockOnImageUrlChange).toHaveBeenCalledWith('http://regular-url');
+    expect(mockOnImageUrlChange).toHaveBeenCalledWith('https://regular-url');
     // Ensure it correctly updates the UI
     expect(mockOnImageFileChange).toHaveBeenCalledWith(undefined);
   });
