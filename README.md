@@ -24,11 +24,9 @@ If you want to use the stable version of daylog, you can find it [here](https://
 - **2FA:** daylog includes a built-in 2FA feature, allowing you to add an extra layer of security to your account.
 - **S3 integration:** daylog includes a built-in s3 integration feature, allowing you to store your notes and boards uploaded images in a cloud storage service.
 
-### Screenshots
+### Preview
 
-![daylog_portrait](resources/readme_portrait_1.png)
-
-![daylog_landscape](resources/readme_portrait_2.png)
+![daylog_preview](resources/preview.webp)
 
 ### Production Installation (Docker Hub)
 
